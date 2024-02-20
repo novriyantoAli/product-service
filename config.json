@@ -1,0 +1,26 @@
+{
+    "server": {
+        "address": ":4211",
+        "tlsAddress": ":4221",
+        "grpc": ":4231"
+    },
+    "database": {
+        "host": "localhost",
+        "port": "3306",
+        "user": "root",
+        "pass": "",
+        "name": "product-service"
+    },
+    "qris": {
+        "loginURL": "https://merchant.qris.online/m/login.php",
+        "loginAction": "https://merchant.qris.online/m/login.php?pgv=go",
+        "transactionURL": "https://merchant.qris.online/m/kontenr.php?idir=pages/historytrx.php",
+        "fieldUsername": "username",
+        "username": "novriyanto.ali@gmail.com",
+        "fieldPassword": "password",
+        "password":"$H163HQreal",
+        "fieldSecret": "secret_token"
+    },
+    "log": "product-service.log",
+    "debug": true
+}

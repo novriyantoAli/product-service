@@ -1,0 +1,32 @@
+[36mINFO[0m[2024-01-27T23:28:20+08:00]/home/andreas/Development/product-service/app.go:82 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-01-28T01:35:04+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[31mERRO[0m[2024-01-28T01:35:52+08:00]/home/andreas/Development/product-service/product/usecase/product_ucase.go:30 github.com/novriyantoAli/product-service/product/usecase.(*usecase).Find() sql: Scan error on column index 0, name "id": converting driver.Value type []uint8 ("df0d3d7e-b2ff-484f-8d7e-dd27c6dc07d2") to a uint: invalid syntax 
+[36mINFO[0m[2024-01-28T01:37:35+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-01-28T01:40:31+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-01-28T01:40:38+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-01-28T01:43:56+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-10T14:36:44+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-10T19:58:09+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-10T21:45:48+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T00:25:45+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T01:17:25+08:00]/home/andreas/Development/product-service/app.go:84 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T01:22:45+08:00]/home/andreas/Development/product-service/app.go:95 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T01:26:33+08:00]/home/andreas/Development/product-service/app.go:95 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T01:42:50+08:00]/home/andreas/Development/product-service/app.go:95 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T09:22:03+08:00]/home/andreas/Development/product-service/app.go:95 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T13:57:52+08:00]/home/andreas/Development/product-service/app.go:95 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T14:36:59+08:00]/home/andreas/Development/product-service/app.go:95 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T14:38:36+08:00]/home/andreas/Development/product-service/app.go:95 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T16:22:21+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[31mERRO[0m[2024-02-20T16:22:29+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:19 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).Find() Error 1146 (42S02): Table 'product-service.radusergroup' doesn't exist 
+[36mINFO[0m[2024-02-20T16:46:12+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-20T16:48:11+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[31mERRO[0m[2024-02-20T16:50:43+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[31mERRO[0m[2024-02-20T16:50:50+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[31mERRO[0m[2024-02-20T16:51:54+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[31mERRO[0m[2024-02-20T16:53:59+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[31mERRO[0m[2024-02-20T16:54:32+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[31mERRO[0m[2024-02-20T16:56:23+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[31mERRO[0m[2024-02-20T16:59:55+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[31mERRO[0m[2024-02-20T17:00:02+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[31mERRO[0m[2024-02-20T17:00:13+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:37 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadreply() Error 1146 (42S02): Table 'product-service.radgroupreply' doesn't exist 

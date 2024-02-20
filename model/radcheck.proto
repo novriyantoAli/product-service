@@ -1,0 +1,26 @@
+syntax = "proto3";
+package model;
+
+option go_package = "./model";
+
+message Radcheck {
+    uint64 ID = 1;
+    string Username = 2;
+    string Attribute = 3;
+    string OP = 4;
+    string Value = 5;
+}
+
+message RadcheckList {
+    repeated Radcheck list = 1;
+}
+
+import "google/protobuf/empty.proto";
+
+service Radchecks {
+    rpc Find(Radcheck) returns (RadcheckList) {}
+    rpc Save(Radcheck) returns (google.protobuf.Empty) {}
+    rpc SaveBatch(RadcheckList) returns (google.protobuf.Empty) {}
+}
+
+

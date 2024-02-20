@@ -1,0 +1,23 @@
+syntax = "proto3";
+package model;
+
+option go_package = "./model";
+
+message Product {
+    uint64 ID = 1;
+    string Name = 2;
+    string ValUnit = 3;
+    uint64 ValVal = 4;
+    uint64 Price = 5;
+    string Profile = 6;
+}
+
+message ProductList {
+    repeated Product list = 1;
+}
+
+service Products {
+    rpc Find(Product) returns (ProductList) {}
+}
+
+
