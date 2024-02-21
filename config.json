@@ -22,5 +22,13 @@
         "fieldSecret": "secret_token"
     },
     "log": "product-service.log",
-    "debug": true
+    "debug": true,
+    "setting":{
+        "timeLayoutFormat": "02 Jan 2006 15:04:05",
+        "dictionary":{
+            "expire": "Expiration",
+            "profile": "User-Profile",
+            "password": "Cleartext-Password"
+        }
+    }
 }

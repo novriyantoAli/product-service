@@ -57,5 +57,36 @@ func ConnectDB() {
 // }
 
 func Migrations() {
-	GORM.AutoMigrate(&domain.Product{}, &domain.Radcheck{})
+	GORM.AutoMigrate(&domain.Product{}, &domain.Radcheck{}, &domain.Voucher{})
+}
+
+func Trigger() {
+	GORM.Exec(`
+	CREATE TRIGGER irtgr AFTER INSERT ON radacct FOR EACH ROW
+
+	BEGIN
+
+	SET @expiration = (SELECT COUNT(*) FROM radcheck WHERE username = New.username AND attribute = 'Expiration');
+
+	IF (@expiration = 0) THEN
+		SET @validity_value = (SELECT products.val_val FROM vouchers INNER JOIN products ON products.id = vouchers.id_product WHERE vouchers.username = New.username ORDER BY vouchers.id DESC LIMIT 1);
+		SET @validity_unit = (SELECT products.val_unit FROM vouchers INNER JOIN products ON products.id = vouchers.id_product WHERE vouchers.username = New.username ORDER BY vouchers.id DESC LIMIT 1);
+
+		IF (@validity_unit = 'HOUR') THEN
+			INSERT INTO radcheck(username, attribute, op, value) VALUES(New.username, "Expiration", ":=", DATE_FORMAT((NOW() + INTERVAL @validity_value HOUR), "%d %b %Y %H:%I:%S"));
+
+		ELSEIF (@validity_unit = 'DAY') THEN
+			INSERT INTO radcheck(username, attribute, op, value) VALUES(New.username, "Expiration", ":=", DATE_FORMAT((NOW() + INTERVAL @validity_value DAY), "%d %b %Y %H:%I:%S"));
+
+		ELSEIF (@validity_unit = 'MONTH') THEN
+			INSERT INTO radcheck(username, attribute, op, value) VALUES(New.username, "Expiration", ":=", DATE_FORMAT((NOW() + INTERVAL @validity_value MONTH), "%d %b %Y %H:%I:%S"));
+
+		ELSEIF (@validity_unit = 'YEAR') THEN
+			INSERT INTO radcheck(username, attribute, op, value) VALUES(New.username, "Expiration", ":=", DATE_FORMAT((NOW() + INTERVAL @validity_unit YEAR), "%d %b %Y %H:%I:%S"));
+
+		END IF;
+
+	END IF;
+	END;
+	`)
 }

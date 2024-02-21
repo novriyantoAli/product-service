@@ -15,6 +15,8 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
+	_radacctRepository "github.com/novriyantoAli/product-service/m_radacct/repository/mysql"
+
 	_productHandlerGRPC "github.com/novriyantoAli/product-service/product/delivery/grpc"
 	_productHandler "github.com/novriyantoAli/product-service/product/delivery/http"
 	_productRepository "github.com/novriyantoAli/product-service/product/repository/mysql"
@@ -27,6 +29,10 @@ import (
 	_profileHandler "github.com/novriyantoAli/product-service/m_profile/delivery/http"
 	_profileRepository "github.com/novriyantoAli/product-service/m_profile/repository/mysql"
 	_profileUsecase "github.com/novriyantoAli/product-service/m_profile/usecase"
+
+	_voucherHandler "github.com/novriyantoAli/product-service/m_voucher/delivery/http"
+	_voucherRepository "github.com/novriyantoAli/product-service/m_voucher/repository/mysql"
+	_voucherUsecase "github.com/novriyantoAli/product-service/m_voucher/usecase"
 )
 
 type customValidator struct {
@@ -49,6 +55,8 @@ func init() {
 	initializers.ConnectDB()
 
 	initializers.Migrations()
+
+	initializers.Trigger()
 }
 
 func main() {
@@ -94,6 +102,12 @@ func main() {
 	profileRepo := _profileRepository.NewMysqlClient(initializers.GORM)
 	profileUCase := _profileUsecase.NewUsecase(profileRepo)
 	_profileHandler.NewHandler(e, profileUCase)
+
+	radacctRepo := _radacctRepository.NewMysqlClient(initializers.GORM)
+
+	voucherRepo := _voucherRepository.NewMysqlClient(initializers.GORM)
+	voucherUCase := _voucherUsecase.NewUsecase(voucherRepo, productRepo, radcheckRepo, radacctRepo)
+	_voucherHandler.NewHandler(e, voucherUCase)
 
 	go func() {
 		l, err := net.Listen("tcp", viper.GetString(`server.grpc`))

@@ -15,6 +15,7 @@ func (Radcheck) TableName() string {
 }
 
 type RadcheckRepository interface {
+	First(param string) (res Radcheck, err error)
 	CreateBatch(params []Radcheck) (err error)
 	Save(param Radcheck) (err error)
 }

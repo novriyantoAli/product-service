@@ -13,6 +13,11 @@ func NewMysqlClient(db *gorm.DB) domain.RadcheckRepository {
 	return &mysqlClient{DB: db}
 }
 
+func (m *mysqlClient) First(param string) (res domain.Radcheck, err error) {
+	err = m.DB.First(&res, "username = ?", param).Error
+	return
+}
+
 func (m *mysqlClient) CreateBatch(param []domain.Radcheck) (err error) {
 	err = m.DB.Create(param).Error
 	return

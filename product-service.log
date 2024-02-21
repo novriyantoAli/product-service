@@ -30,3 +30,20 @@
 [31mERRO[0m[2024-02-20T16:59:55+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
 [31mERRO[0m[2024-02-20T17:00:02+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
 [31mERRO[0m[2024-02-20T17:00:13+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:37 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadreply() Error 1146 (42S02): Table 'product-service.radgroupreply' doesn't exist 
+[36mINFO[0m[2024-02-20T23:20:28+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[31mERRO[0m[2024-02-20T23:24:34+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:28 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).FindRadcheck() Error 1146 (42S02): Table 'product-service.radgroupcheck' doesn't exist 
+[36mINFO[0m[2024-02-20T23:55:26+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-21T00:38:03+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-21T00:50:35+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[31mERRO[0m[2024-02-21T00:54:59+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:46 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).Save() WHERE conditions required                    
+[31mERRO[0m[2024-02-21T00:56:30+08:00]/home/andreas/Development/product-service/m_profile/usecase/profile_ucase.go:46 github.com/novriyantoAli/product-service/m_profile/usecase.(*usecase).Save() WHERE conditions required                    
+[36mINFO[0m[2024-02-21T00:57:15+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-21T01:06:36+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-21T01:09:32+08:00]/home/andreas/Development/product-service/app.go:103 main.main.func1() start serve on port :4231                    
+[31mFATA[0m[2024-02-22T01:38:51+08:00]/home/andreas/Development/product-service/app.go:120 main.main() listen tcp :4211: bind: address already in use 
+[36mINFO[0m[2024-02-22T01:39:00+08:00]/home/andreas/Development/product-service/app.go:115 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-22T01:43:54+08:00]/home/andreas/Development/product-service/app.go:115 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-22T02:40:16+08:00]/home/andreas/Development/product-service/app.go:115 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-22T02:51:40+08:00]/home/andreas/Development/product-service/app.go:115 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-22T02:55:32+08:00]/home/andreas/Development/product-service/app.go:115 main.main.func1() start serve on port :4231                    
+[36mINFO[0m[2024-02-22T03:05:31+08:00]/home/andreas/Development/product-service/app.go:117 main.main.func1() start serve on port :4231                    

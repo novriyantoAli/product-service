@@ -39,3 +39,57 @@ func (uc *usecase) FindRadreply(param *domain.Radgroupreply) (res []domain.Radgr
 
 	return
 }
+
+func (uc *usecase) Save(param *domain.Profile) error {
+	err := uc.Repo.Save(param)
+	if err != nil {
+		logrus.Error(err)
+	}
+
+	return err
+}
+
+func (uc *usecase) SaveRadcheck(param *domain.Radgroupcheck) error {
+	err := uc.Repo.SaveRadcheck(param)
+	if err != nil {
+		logrus.Error(err)
+	}
+
+	return err
+}
+
+func (uc *usecase) SaveRadreply(param *domain.Radgroupreply) error {
+	err := uc.Repo.SaveRadreply(param)
+	if err != nil {
+		logrus.Error(err)
+	}
+
+	return err
+}
+
+func (uc *usecase) DeleteRadcheck(id uint) error {
+	err := uc.Repo.DeleteRadcheck(id)
+	if err != nil {
+		logrus.Error(err)
+	}
+
+	return err
+}
+
+func (uc *usecase) DeleteRadreply(id uint) error {
+	err := uc.Repo.DeleteRadreply(id)
+	if err != nil {
+		logrus.Error(err)
+	}
+
+	return err
+}
+
+func (uc *usecase) Delete(username string) error {
+	err := uc.Repo.Delete(username)
+	if err != nil {
+		logrus.Error(err)
+	}
+
+	return err
+}
